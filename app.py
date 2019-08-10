@@ -2,11 +2,12 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+# mock users
 users = ['Nicholas Ramsay', 'Belle Delphine', 'Wadingo Wajahjah']
 
 @app.route("/")
 def index():
-    return render_template('welcome.html', name='nick')
+    return render_template('welcome.html', text='Welcome to my Flask example website')
 
 @app.route('/users/')
 @app.route('/users/<id>')
